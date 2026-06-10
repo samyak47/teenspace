@@ -261,6 +261,12 @@
     text-shadow: 0 0 40px rgba(255,255,255,0.15);
     animation: numGlow 3s ease-in-out infinite alternate;
   }
+  .hrp-source {
+    margin-top: 10px;
+    color: rgba(255,255,255,0.58);
+    font-size: 11px;
+    line-height: 1.45;
+  }
   @keyframes numGlow {
     from { text-shadow: 0 0 20px rgba(255,255,255,0.1); }
     to   { text-shadow: 0 0 50px rgba(255,255,255,0.25); }
@@ -620,6 +626,7 @@
       <div class="hrp-card hrp-main">
         <div class="hrp-main-num">40%</div>
         <div class="hrp-main-label">of Indian teens cite stress &amp; anxiety as their #1 concern</div>
+        <div class="hrp-source">Source: NIMHANS 2024, NCERT Survey 2022, UNICEF India, Indian Psychiatric Society 2024</div>
       </div>
       <!-- Grid of 4 stat cards -->
       <div class="hrp-grid">
@@ -668,9 +675,7 @@
     <div class="about-left">
       <div class="section-tag fade-up">Who We Are</div>
       <h2 class="section-title fade-up">A student movement for <em>every teen</em> who feels unheard.</h2>
-      <p class="section-body fade-up">TeenSpace India was born from a simple truth: too many teenagers in India are struggling in silence. We are a student-led organization that believes peer voices hold power. We use storytelling, content, creative expression, and community to create safe mental health conversations — everywhere from school hallways to Instagram feeds.
-
-TeenSpace India is an awareness and resource-sharing initiative. We do not provide therapy, counseling, or crisis support. Our role is to educate, raise awareness, and help individuals discover trusted helplines, organizations, and mental health resources.</p>
+      <p class="section-body fade-up">TeenSpace India was born from a simple truth: too many teenagers in India are struggling in silence. We are a student-led organization that believes peer voices hold power. We use storytelling, content, creative expression, and community to create safe mental health conversations — everywhere from school hallways to Instagram feeds.</p>
 
     </div>
     <div class="about-right fade-up">
@@ -842,18 +847,24 @@ TeenSpace India is an awareness and resource-sharing initiative. We do not provi
   <h2 class="section-title fade-up">Mental health issues <em>facing</em> Indian teens today.</h2>
   <p class="section-body fade-up">India has over 436 million children and adolescents. Mental health services have lagged significantly, leaving a massive treatment gap compounded by stigma, lack of awareness, and limited resources in schools.</p>
   <div class="mh-grid">
-    <div class="mh-card fade-up">
+    <a class="mh-card fade-up" href="#blog-depression" style="text-decoration:none;color:inherit;display:block;">
       <div class="icon-circle" style="background:#e8f2eb;">😔</div>
       <h4>Depression</h4>
       <p>Depression is the most prevalent mental health issue among school-age adolescents in India, often going unrecognised until it becomes severe dysfunction.</p>
-      <div class="pill" style="color:var(--sage);">Most Common</div>
-    </div>
-    <div class="mh-card fade-up" style="transition-delay:0.1s">
+      <span class="blog-toggle-btn" style="background:var(--sage);">Read More</span>
+    </a>
+    <a class="mh-card fade-up" href="#blog-anxiety" style="transition-delay:0.1s;text-decoration:none;color:inherit;display:block;">
       <div class="icon-circle" style="background:#faeee9;">😰</div>
-      <h4>Anxiety &amp; Stress</h4>
-      <p>Academic pressure, competitive exams, and social media overexposure have pushed 40% of Indian teenagers to cite stress and anxiety as their primary concern.</p>
-      <div class="pill" style="color:var(--terracotta);">40% of Teens</div>
-    </div>
+      <h4>Anxiety</h4>
+      <p>Persistent worry, pressure, and fear can affect school, relationships, sleep, and daily life. Understanding anxiety is the first step toward support.</p>
+      <span class="blog-toggle-btn" style="background:var(--terracotta);">Read More</span>
+    </a>
+    <a class="mh-card fade-up" href="#blog-stress" style="transition-delay:0.15s;text-decoration:none;color:inherit;display:block;">
+      <div class="icon-circle" style="background:#fdf5e0;">📚</div>
+      <h4>Stress</h4>
+      <p>Academic pressure, family expectations, social comparison, and uncertainty can make stress feel overwhelming for many teenagers.</p>
+      <span class="blog-toggle-btn" style="background:var(--gold);">Read More</span>
+    </a>
     <div class="mh-card fade-up" style="transition-delay:0.2s">
       <div class="icon-circle" style="background:#ede9f5;">📱</div>
       <h4>Social Media &amp; Isolation</h4>
@@ -879,6 +890,283 @@ TeenSpace India is an awareness and resource-sharing initiative. We do not provi
       <div class="pill" style="color:var(--terracotta);">Critical Alert</div>
     </div>
   </div>
+</section>
+
+<style>
+  .blog-section {
+    background: var(--white);
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
+  .blog-section:not(:target) {
+    display: none;
+  }
+  .blog-section:nth-of-type(even) {
+    background: var(--cream);
+  }
+  .blog-article {
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid rgba(74,124,89,0.12);
+    border-radius: 8px;
+    padding: clamp(26px, 5vw, 56px);
+    box-shadow: 0 20px 60px rgba(40,55,44,0.08);
+  }
+  .blog-section:nth-of-type(even) .blog-article {
+    background: #fffaf3;
+  }
+  .blog-article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.05;
+    margin: 8px 0 20px;
+    color: var(--ink);
+  }
+  .blog-article h3 {
+    margin: 38px 0 12px;
+    color: var(--sage);
+    font-size: 24px;
+  }
+  .blog-article h4 {
+    margin: 26px 0 8px;
+    color: var(--ink);
+    font-size: 18px;
+  }
+  .blog-article p,
+  .blog-article li {
+    color: var(--ink-muted);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .blog-article ul {
+    padding-left: 22px;
+    margin: 12px 0 22px;
+  }
+  .blog-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 28px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .blog-table th,
+  .blog-table td {
+    border: 1px solid rgba(74,124,89,0.16);
+    padding: 12px 14px;
+    text-align: left;
+    color: var(--ink-muted);
+  }
+  .blog-table th {
+    color: var(--ink);
+    background: rgba(74,124,89,0.08);
+  }
+  .blog-disclaimer {
+    margin-top: 36px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--terracotta);
+    background: rgba(196,103,74,0.08);
+    border-radius: 0 8px 8px 0;
+    font-size: 14px !important;
+  }
+  .blog-toggle-btn,
+  .blog-read-less {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 20px;
+    border-radius: 999px;
+    color: var(--white) !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 12px;
+    box-shadow: 0 10px 24px rgba(40,55,44,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .blog-toggle-btn:hover,
+  .blog-read-less:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(40,55,44,0.18);
+  }
+  .blog-read-less {
+    background: var(--sage);
+    margin-top: 28px;
+  }
+</style>
+
+<section id="blog-depression" class="blog-section">
+  <article class="blog-article fade-up">
+    <div class="section-tag">Mental Health Blog</div>
+    <h2>Understanding Depression: More Than Just Feeling Sad</h2>
+    <p>Depression is one of the most misunderstood mental health conditions. Many people think it is simply feeling sad or having a bad day, but depression is much more complex. It can affect how a person thinks, feels, and functions in daily life.</p>
+
+    <h3>What is Depression?</h3>
+    <p>Depression is a mental health condition characterized by persistent feelings of sadness, emptiness, or loss of interest in activities that once brought joy. It can impact a person's emotions, energy levels, sleep, appetite, concentration, and relationships.</p>
+    <p>Everyone feels sad from time to time, but depression lasts longer and can significantly affect everyday life.</p>
+
+    <h3>Signs of Depression</h3>
+    <p>Some common signs include:</p>
+    <ul>
+      <li>Persistent sadness or hopelessness</li>
+      <li>Loss of interest in hobbies and activities</li>
+      <li>Difficulty concentrating</li>
+      <li>Changes in sleep patterns</li>
+      <li>Low energy or fatigue</li>
+      <li>Feelings of worthlessness or excessive guilt</li>
+      <li>Withdrawal from friends and family</li>
+      <li>Changes in appetite</li>
+    </ul>
+    <p>Experiencing one or two of these symptoms occasionally does not necessarily mean someone has depression. However, if symptoms persist and interfere with daily life, seeking support is important.</p>
+
+    <h3>Depression Among Teenagers</h3>
+    <p>Teenagers today face unique challenges, including academic pressure, social expectations, online comparison, and uncertainty about the future. Social media can be a great way to connect with others, but it can also create unrealistic standards and increase feelings of isolation or self-doubt.</p>
+    <p>Many teens may struggle silently because they fear being judged or misunderstood.</p>
+
+    <h3>Why Talking About Depression Matters</h3>
+    <p>Mental health conversations help reduce stigma and encourage people to seek support when they need it. Depression is not a sign of weakness, laziness, or failure. It is a real health condition that deserves understanding and care.</p>
+    <p>Creating safe spaces where people can talk openly about their feelings can make a meaningful difference.</p>
+
+    <h3>How to Support Yourself and Others</h3>
+    <ul>
+      <li>Reach out to trusted friends, family members, or mentors.</li>
+      <li>Maintain healthy sleep, nutrition, and physical activity habits.</li>
+      <li>Take breaks from excessive social media use when needed.</li>
+      <li>Practice self-compassion and avoid harsh self-judgment.</li>
+      <li>Encourage open conversations about mental health.</li>
+    </ul>
+    <p>If someone seems to be struggling, listening without judgment and showing kindness can be incredibly valuable.</p>
+
+    <h3>Final Thoughts</h3>
+    <p>Depression is more than sadness. It is a serious mental health condition that can affect anyone, regardless of age, background, or circumstances. By increasing awareness, showing empathy, and encouraging support, we can help create a world where people feel safe seeking help and talking about their mental health.</p>
+    <p>Remember: asking for help is a sign of strength, not weakness.</p>
+    <p class="blog-disclaimer">Disclaimer: This article is for educational purposes only and should not replace professional mental health advice, diagnosis, or treatment. If you are experiencing significant distress, please seek support from a qualified mental health professional or a trusted adult.</p>
+    <a class="blog-read-less" href="#mentalhealth">Read Less</a>
+  </article>
+</section>
+
+<section id="blog-anxiety" class="blog-section">
+  <article class="blog-article fade-up">
+    <div class="section-tag">Mental Health Blog</div>
+    <h2>Anxiety in Teenagers: Understanding the Challenge</h2>
+    <p>In today's fast-paced and highly connected world, stress and anxiety have become increasingly common among teenagers. Academic pressure, social expectations, family responsibilities, relationships, and constant exposure to social media can all affect a young person's mental well-being.</p>
+    <p>Feeling stressed before an exam or nervous about an important event is completely normal. However, when these feelings become overwhelming, persistent, or start affecting daily life, they deserve attention and care.</p>
+
+    <h3>What Is Anxiety?</h3>
+    <p>Anxiety is more than occasional nervousness or worry. It involves excessive fear, apprehension, or concern that can be difficult to control.</p>
+    <p>According to the World Health Organization, anxiety disorders affected approximately 359 million people globally in 2021, making them among the most common mental health conditions worldwide.</p>
+    <p>While everyone experiences anxiety occasionally, persistent anxiety can interfere with school performance, relationships, sleep, and daily activities.</p>
+
+    <h3>Common Signs of Anxiety</h3>
+    <h4>Emotional Symptoms</h4>
+    <ul>
+      <li>Excessive worrying</li>
+      <li>Feeling constantly nervous</li>
+      <li>Irritability</li>
+      <li>Difficulty relaxing</li>
+    </ul>
+    <h4>Physical Symptoms</h4>
+    <ul>
+      <li>Rapid heartbeat</li>
+      <li>Sweating</li>
+      <li>Muscle tension</li>
+      <li>Stomach discomfort</li>
+      <li>Headaches</li>
+      <li>Fatigue</li>
+    </ul>
+    <h4>Behavioral Symptoms</h4>
+    <ul>
+      <li>Avoiding situations</li>
+      <li>Difficulty making decisions</li>
+      <li>Constant reassurance-seeking</li>
+      <li>Procrastination</li>
+    </ul>
+
+    <h3>Stress vs Anxiety: What's the Difference?</h3>
+    <table class="blog-table">
+      <tr><th>Stress</th><th>Anxiety</th></tr>
+      <tr><td>Usually linked to a specific situation</td><td>May continue without a clear cause</td></tr>
+      <tr><td>Often temporary</td><td>Can persist for long periods</td></tr>
+      <tr><td>Usually improves when the problem is resolved</td><td>May continue even after the situation ends</td></tr>
+    </table>
+
+    <h3>Mental Health Among Adolescents</h3>
+    <p>Mental health challenges among teenagers are more common than many people realize. According to WHO, 1 in 7 adolescents aged 10-19 experiences a mental disorder. Depression, anxiety, and behavioral disorders are among the leading causes of illness and disability among young people.</p>
+
+    <h3>Healthy Ways to Manage Anxiety</h3>
+    <ul>
+      <li>Focus on what you can control and break large challenges into smaller steps.</li>
+      <li>Build a consistent routine with sleep, meals, study time, activity, and relaxation.</li>
+      <li>Prioritize 8-10 hours of sleep and reduce screen use before bed.</li>
+      <li>Stay physically active through walking, sports, yoga, cycling, or other movement.</li>
+      <li>Limit unhealthy comparison on social media.</li>
+      <li>Practice relaxation techniques such as slow breathing and mindfulness.</li>
+      <li>Talk about your feelings with trusted people.</li>
+      <li>Challenge negative thoughts by asking whether they are based on facts.</li>
+      <li>Seek professional support when anxiety feels overwhelming or affects daily functioning.</li>
+    </ul>
+
+    <h3>Final Thoughts</h3>
+    <p>Stress and anxiety are part of being human, but they should not define your life. Millions of teenagers around the world experience similar struggles, and many successfully learn healthy ways to manage them.</p>
+    <p>You are not alone. You do not have to have everything figured out. It is always okay to ask for help when you need it.</p>
+    <p class="blog-disclaimer">Disclaimer: This article is for educational purposes only and should not replace professional mental health advice, diagnosis, or treatment. If you are experiencing significant distress, please seek support from a qualified mental health professional or a trusted adult.</p>
+    <a class="blog-read-less" href="#mentalhealth">Read Less</a>
+  </article>
+</section>
+
+<section id="blog-stress" class="blog-section">
+  <article class="blog-article fade-up">
+    <div class="section-tag">Mental Health Blog</div>
+    <h2>Understanding Stress in Teenagers</h2>
+    <p>Stress is the body's natural response to challenges, demands, or changes. When faced with a difficult situation, the brain releases hormones such as adrenaline and cortisol, preparing the body to react.</p>
+    <p>This response can be helpful in certain situations. For example, a moderate amount of stress can motivate students to prepare for exams, meet deadlines, and achieve goals. However, prolonged or excessive stress can negatively affect physical health, emotional well-being, and overall quality of life.</p>
+
+    <h3>Common Causes of Stress Among Teenagers</h3>
+    <h4>Academic Pressure</h4>
+    <p>Many students face pressure to achieve high grades, meet family expectations, prepare for competitive examinations, and decide on future careers.</p>
+    <h4>Social Relationships</h4>
+    <p>Friendships, peer pressure, social acceptance, and conflicts can become significant sources of stress.</p>
+    <h4>Family Expectations</h4>
+    <p>Balancing personal interests with family expectations can sometimes create emotional strain.</p>
+    <h4>Social Media and Comparison</h4>
+    <p>Social media allows people to connect, but it can also encourage comparison. Constant exposure to carefully curated lifestyles, achievements, and appearances may lead to feelings of inadequacy.</p>
+    <h4>Future Uncertainty</h4>
+    <p>Questions about college admissions, careers, finances, and personal success often contribute to anxiety and stress.</p>
+
+    <h3>How Stress Can Affect Daily Life</h3>
+    <ul>
+      <li>Reduced concentration and difficulty remembering information</li>
+      <li>Procrastination or reduced motivation</li>
+      <li>Sleep disturbances, headaches, fatigue, and low energy</li>
+      <li>Irritability, mood changes, hopelessness, or emotional exhaustion</li>
+      <li>Withdrawal from friends or difficulty communicating feelings</li>
+    </ul>
+
+    <h3>Healthy Ways to Manage Stress</h3>
+    <ul>
+      <li>Focus on what you can control instead of trying to solve everything at once.</li>
+      <li>Break large challenges into smaller, manageable steps.</li>
+      <li>Build a consistent routine with regular sleep, healthy meals, study time, physical activity, and relaxation.</li>
+      <li>Aim for 8-10 hours of sleep and reduce screen use before bed.</li>
+      <li>Stay physically active through walking, running, cycling, swimming, yoga, or sports.</li>
+      <li>Limit unhealthy comparison and remember that social media often shows highlights rather than reality.</li>
+      <li>Try deep breathing: inhale for 4 seconds, hold for 4 seconds, and exhale slowly for 6 seconds.</li>
+      <li>Talk to parents, friends, teachers, mentors, or counselors.</li>
+      <li>Take breaks without guilt. Rest is not laziness.</li>
+      <li>Seek professional support if stress persists for weeks or affects school, relationships, or daily functioning.</li>
+    </ul>
+
+    <h3>Breaking the Stigma</h3>
+    <p>Many teenagers hesitate to discuss mental health because they fear judgment or misunderstanding. However, mental health challenges are common, and support is available.</p>
+    <p>Creating safe spaces for open conversations can help reduce stigma and encourage people to seek help when needed.</p>
+
+    <h3>Final Thoughts</h3>
+    <p>Progress does not require perfection. Small daily actions, supportive relationships, self-compassion, and healthy habits can make a meaningful difference over time.</p>
+    <p>You are not alone. You do not have to have everything figured out. It is always okay to ask for help when you need it.</p>
+    <p class="blog-disclaimer">Disclaimer: This article is for educational purposes only and should not replace professional mental health advice, diagnosis, or treatment. If you are experiencing significant distress, please seek support from a qualified mental health professional or a trusted adult.</p>
+    <a class="blog-read-less" href="#mentalhealth">Read Less</a>
+  </article>
 </section>
 
 <section style="background:var(--white);">
